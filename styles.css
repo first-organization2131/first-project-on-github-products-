@@ -75,4 +75,23 @@
       text-align: center;
       color: white;
       padding: 20px;
+      border-radius: 50%;
+      border: 5px solid grey;
+      width: 5px;
+      height: 5px;
+      margin: 0 auto;
+    -webkit-animation: loading 2s linear infinite; /* Safari */
+    animation: loading 2s linear infinite;
+     border-top: 5px solid #3498db;
     }
+
+    /* to load in safari and old browsers */
+@-webkit-keyframes loading {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+/* to load in new browsers  */
+@keyframes loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
