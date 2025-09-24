@@ -1,6 +1,4 @@
 
-
-
  let skip = 0;
     const limit = 18;
     let isLoading = false;
@@ -76,10 +74,6 @@
         fetchProducts();
       }
     }); 
-
-
-
-
 
 
 
