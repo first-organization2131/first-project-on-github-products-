@@ -1,4 +1,11 @@
+    function checkIfMoreNeeded() {
+  const scrollHeight = document.documentElement.scrollHeight;
+  const clientHeight = window.innerHeight;
 
+  if (scrollHeight <= clientHeight + 100 && hasMore) {
+    fetchProducts();
+  }
+}
  let skip = 0;
     const limit = 18;
     let isLoading = false;
@@ -50,7 +57,9 @@
 
           skip += limit;
           isLoading = false;
+          checkIfMoreNeeded();
         })
+        
         .catch(err => {
           console.error("Fetch error:", err);
           isLoading = false;
@@ -74,6 +83,11 @@
         fetchProducts();
       }
     }); 
+
+
+
+
+
 
 
 
