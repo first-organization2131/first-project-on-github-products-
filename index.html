@@ -10,8 +10,21 @@
 </head>
 
 <body>
- <div class="products-wrapper" id="demo"></div>
+ <!-- PRODUCT PAGE -->
+<div id="body">
+  <button onclick="cartpage()">View Cart</button>
+  <div class="products-wrapper" id="demo"></div>
   <div id="loading"></div>
+</div>
+
+<!-- CART PAGE -->
+<div id="cartdesign" style="display:none">
+  <div id="cproducts"></div>
+  <div>Total: $<span id="hamaada">0.00</span></div>
+  <button onclick="backToShop()">Back to Shop</button>
+</div>
+
+
 
  
 <script src='main.js'></script>
