@@ -10,14 +10,51 @@
 </head>
 
 <body>
- <div class="products-wrapper" id="demo"></div>
-  <div id="loading"></div>
 
- 
+<!-- NAVIGATION BAR -->
+<nav id="navbar">
+    <button onclick="backToShop()">HOME</button> 
+    <!-- <button onclick="availabilityStatus()">In Stock</button>
+    <button onclick="category()">groceries</button> -->
+    <button onclick="cartpage()">View Cart</button>
+    <!-- <button onclick="categorylaps()">laptops</button> -->
+    <button onclick="filterpage()">filter key</button>
+</nav>
+
+ <!-- PRODUCT PAGE -->
+<div id="body">
+  <div class="products-wrapper" id="demo"></div>
+  <div id="loading"></div>
+</div>
+
+<!-- CART PAGE -->
+<div id="cartdesign" style="display:none">
+  <div id="cproducts"></div>
+  <div>Total: $<span id="hamaada">0.00</span></div>
+  <button onclick="backToShop()">Back to Shop</button>
+</div>
+
+<!-- FILTER PAGE -->
+<div id="filterdesign" class="filterclass">
+    <input type="checkbox" id="lap" value="laptop" class="ba">
+    <label for="lap"> Laptops</label><br>
+    
+    <input type="checkbox" id="groc" value="groceries" class="ba">
+    <label for="groc"> Groceries</label><br>
+    
+    <input type="checkbox" id="status" value="status" class="ba">
+    <label for="status"> Availability Status</label><br>
+    
+    <button onclick="applybtn()">Apply</button>
+</div>
+
+<div id="openlaptop"><div id="laptop" class="products-wrapper"></div></div>
+<div id="opencategory"><div id="category" class="products-wrapper"></div></div>
+<div id="openstock"><div id="stock" class="products-wrapper"></div></div>
+
 <script src='main.js'></script>
 
 </body>
 </html>
-
 
 
